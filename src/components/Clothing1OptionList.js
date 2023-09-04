@@ -5,7 +5,7 @@ const Clothing1OptionList = ({ setSelectedOptions, handleOptionChange }) => {
   const imageList = images.keys().map((image) => images(image));
   // console.log(imageList);
 
-  const handleHairOptionClick = (image) => {
+  const handleClothing1OptionClick = (image) => {
     handleOptionChange("clothing1", image);
   };
 
@@ -25,7 +25,7 @@ const Clothing1OptionList = ({ setSelectedOptions, handleOptionChange }) => {
           <div
             className="clickable square"
             key={index}
-            onClick={() => handleHairOptionClick(image)}
+            onClick={() => handleClothing1OptionClick(image)}
           >
             <img
               src={image}

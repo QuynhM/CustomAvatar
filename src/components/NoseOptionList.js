@@ -5,7 +5,7 @@ const NoseOptionList = ({ setSelectedOptions, handleOptionChange }) => {
   const imageList = images.keys().map((image) => images(image));
   // console.log(imageList);
 
-  const handleHairOptionClick = (image) => {
+  const handleNoseOptionClick = (image) => {
     handleOptionChange("nose", image);
   };
 
@@ -15,7 +15,7 @@ const NoseOptionList = ({ setSelectedOptions, handleOptionChange }) => {
     setSelectedOptions((selectedOption) => {
       return { ...selectedOption, nose: imageList[randomIndex] };
     });
-  }, []);
+  });
 
   return (
     <div className="list-section">
@@ -25,7 +25,7 @@ const NoseOptionList = ({ setSelectedOptions, handleOptionChange }) => {
           <div
             className="clickable square"
             key={index}
-            onClick={() => handleHairOptionClick(image)}
+            onClick={() => handleNoseOptionClick(image)}
           >
             <img
               src={image}
